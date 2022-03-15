@@ -1,0 +1,42 @@
+// GLOBAL STYLES
+
+body {
+  font-family: $body-font;
+}
+
+// HEADLINEs
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  font-family: $body-font;
+}
+
+// PARAGRAPHs
+p {
+  font-family: $body-font;
+  color: $dark;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+//LINKs
+a {
+  outline: 0;
+  text-decoration: none;
+  color: $brand-primary-color;
+  &:focus,
+  &:active,
+  &.active,
+  &.activated {
+    outline: 0;
+    text-decoration: none;
+    color: darken($brand-primary-color, 10%);
+  }
+}

@@ -1,13 +1,16 @@
-/* MAIN SCSS */
+/* STYLES */
 
+// VARIABLES & MIXINS
 @import '01-helpers/variables.scss';
-@import '01-helpers/mixins.scss';
+@import '01-helpers/fonts.scss';
 @import '01-helpers/utilities.scss';
+@import '01-helpers/mixins.scss';
 
 @import '02-global/global.scss';
 
-@import '03-components/01-top-bar.scss';
-@import '03-components/02-navbar.scss';
-@import '03-components/03-main.scss';
-@import '03-components/04-footer.scss';
-@import '03-components/05-scroll-to-top.scss';
+@import '03-components/top-bar.scss';
+@import '03-components/navbar.scss';
+@import '03-components/header.scss';
+@import '03-components/main.scss';
+@import '03-components/footer.scss';
+@import '03-components/scroll-to-top.scss';
