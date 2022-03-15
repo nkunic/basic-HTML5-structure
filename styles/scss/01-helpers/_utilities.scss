@@ -159,3 +159,17 @@
     width: 80%;
   }
 }
+
+/* BACKGROUND */
+.bg-primary {
+  background: $primary-color;
+  background: -webkit-linear-gradient(
+    $primary-color,
+    darken($primary-color, 5%)
+  );
+  background: linear-gradient($primary-color, darken($primary-color, 5%));
+}
+
+/*background: url('../img/bg-pattern.png'), $secondary-color;*/
+/*background: url('../img/bg-pattern.png'), -webkit-linear-gradient(to left, $secondary-color, $tertiary-color);*/
+/*background: url('../img/bg-pattern.png'), linear-gradient(to left, $secondary-color, $tertiary-color);*/
