@@ -1,0 +1,13 @@
+/* FLIP IMAGE */
+@mixin flip-image($scale-axle, $filter) {
+  -moz-transform: $scale-axle;
+  -o-transform: $scale-axle;
+  -webkit-transform: $scale-axle;
+  transform: $scale-axle;
+  filter: $filter;
+  -ms-filter: '$filter';
+}
+/*
+  @include flip-image ($scale-axle, $filter);
+  @include flip-image (scaleX(-1), FlipH);
+*/

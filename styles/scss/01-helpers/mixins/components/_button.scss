@@ -1,0 +1,104 @@
+/* BUTTON */
+@mixin button(
+  $font-family,
+  $font-size,
+  $line-height,
+  $font-weight,
+  $text-align,
+  $text-transform,
+  $vertical-padding,
+  $lateral-padding,
+  $border-width,
+  $border-radius,
+  $color,
+  $background-color,
+  $border-color,
+  $color-hover,
+  $background-color-hover,
+  $border-color-hover,
+  $color-focus,
+  $background-color-focus,
+  $border-color-focus,
+  $color-active,
+  $background-color-active,
+  $border-color-active
+) {
+  font-family: $body-font;
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+  text-align: $text-align;
+  text-transform: $text-transform;
+  letter-spacing: 1px;
+  padding: $vertical-padding $lateral-padding;
+  border-radius: $border-radius;
+  color: $color;
+  background-color: $background-color;
+  border: $border-width solid $border-color;
+  @include transition(all, 0.3s, linear);
+  &:hover {
+    color: $color-hover;
+    background-color: $background-color-hover;
+    border-color: $border-color-hover;
+  }
+  &:focus {
+    text-shadow: 1px 0px 1px $gray-light;
+    color: $color-focus;
+    background-color: $background-color-focus;
+    border-color: $border-color-focus;
+  }
+  &:active {
+    text-shadow: 1px 0px 1px $gray-light;
+    color: $color-active;
+    background-color: $background-color-active;
+    border-color: $border-color-active;
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  &:focus {
+    &:active {
+      outline: 0;
+    }
+  }
+}
+/*
+@include button (
+$font-family,
+$font-size,
+$line-height,
+$font-weight,
+$text-align,
+$text-transform,
+$vertical-padding, $lateral-padding,
+$border-width, $border-radius,
+$color, $background-color, $border-color,
+$color-hover, $background-color-hover, $border-color-hover,
+$color-focus, $background-color-focus, $border-color-focus,
+$color-active, $background-color-active, $border-color-active
+);
+Btn-full:
+@include button (
+$body-font, 14px, 1, 500, center, uppercase,
+8px, 20px,
+0px, 3px,
+$white, $gray, transparent,
+$white, darken( $gray, 10% ), transparent,
+$white, lighten( $gray, 10% ), transparent,
+$white, lighten( $gray, 10% ), transparent
+);
+Btn-outline:
+@include button (
+$body-font, 14px, 1, 500, center, uppercase,
+8px, 20px,
+1px, 3px,
+$white, transparent, $white,
+$gray, $white, $white,
+$white, lighten( $gray, 10% ), transparent,
+$white, lighten( $gray, 10% ), transparent
+);
+*/

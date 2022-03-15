@@ -1,0 +1,34 @@
+/* BORDER RADIUS */
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
+}
+/*
+  @include border-radius($radius);
+  @include border-radius(50%);
+*/
+
+@mixin border-radius-multi(
+  $radius-top-left,
+  $radius-top-right,
+  $radius-bottom-right,
+  $radius-bottom-left
+) {
+  -webkit-border-radius: $radius-top-left $radius-top-right $radius-bottom-right
+    $radius-bottom-left;
+  -moz-border-radius: $radius-top-left $radius-top-right $radius-bottom-right
+    $radius-bottom-left;
+  -ms-border-radius: $radius-top-left $radius-top-right $radius-bottom-right
+    $radius-bottom-left;
+  -o-border-radius: $radius-top-left $radius-top-right $radius-bottom-right
+    $radius-bottom-left;
+  border-radius: $radius-top-left $radius-top-right $radius-bottom-right
+    $radius-bottom-left;
+}
+/*
+  @include border-radius-multi ($radius-top-left, $radius-top-right, $radius-bottom-right, $radius-bottom-left);
+  @include border-radius-multi (20px, 0px, 0px, 20px);
+  */

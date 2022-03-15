@@ -1,0 +1,29 @@
+/* BADGE */
+@mixin badge(
+  $color,
+  $width,
+  $height,
+  $background-color,
+  $border-width,
+  $border-color
+) {
+  color: $color;
+  position: absolute;
+  display: inline-block;
+  padding: 0px;
+  width: $width;
+  height: $height;
+  background-color: $background-color;
+  border: $border-width solid $border-color;
+}
+/*
+  @include badge ($color, $width, $height, $background-color, $border-width, $border-color);
+  @include badge ($white, 25px, 25px, $black, 2px, $white);
+  + Font-mix ++++++++++++++++++++++++
+  @include font-mix ($color, $font-family, $font-size, $line-height, $font-weight, $text-align, $text-transform );
+  @include font-mix ($gray-darker, $body-font, 15px, 1, 500, left, none);
+  @include font-mix ($gray-darker, $body-font, 15px, 1, 500, left, uppercase);
+  + Border-radius ++++++++++++++++++++++++
+  @include border-radius($radius);
+  @include border-radius(50%);
+  */

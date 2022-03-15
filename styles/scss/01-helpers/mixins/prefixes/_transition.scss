@@ -1,0 +1,11 @@
+/* TRANSITION */
+@mixin transition($object, $sec, $type) {
+  -webkit-transition: $object $sec $type;
+  -moz-transition: $object $sec $type;
+  -o-transition: $object $sec $type;
+  transition: $object $sec $type;
+}
+/*
+  @include transition ($object, $sec, $type);
+  @include transition (all, 0.3s, linear);
+  */

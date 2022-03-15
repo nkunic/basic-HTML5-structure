@@ -1,0 +1,61 @@
+/* PLACEHOLDER */
+@mixin placeholder-input(
+  $color,
+  $font-family,
+  $font-size,
+  $line-height,
+  $font-weight,
+  $text-align,
+  $text-transform
+) {
+  ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: $color;
+    font-family: $font-family;
+    font-size: $font-size;
+    line-height: $line-height;
+    font-weight: $font-weight;
+    text-align: $text-align;
+    text-transform: $text-transform;
+  }
+  ::-webkit-input-placeholder {
+    color: $color;
+    font-family: $font-family;
+    font-size: $font-size;
+    line-height: $line-height;
+    font-weight: $font-weight;
+    text-align: $text-align;
+    text-transform: $text-transform;
+  }
+  :-moz-placeholder {
+    /* Firefox 18- */
+    color: $color;
+    font-family: $font-family;
+    font-size: $font-size;
+    line-height: $line-height;
+    font-weight: $font-weight;
+    text-align: $text-align;
+    text-transform: $text-transform;
+  }
+  :-ms-input-placeholder {
+    color: $color;
+    font-family: $font-family;
+    font-size: $font-size;
+    line-height: $line-height;
+    font-weight: $font-weight;
+    text-align: $text-align;
+    text-transform: $text-transform;
+  }
+}
+/*
+  @include placeholder-input (
+  $color,
+  $font-family,
+  $font-size,
+  $line-height,
+  $font-weight,
+  $text-align,
+  $text-transform);
+  @include placeholder-input ($gray-darker, $body-font, 15px, 1, 500, left, none);
+  @include placeholder-input ($gray-darker, $body-font, 15px, 1, 500, left, uppercase);
+  */

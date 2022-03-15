@@ -1,0 +1,41 @@
+/* INPUT */
+@mixin input(
+  $height,
+  $text-align,
+  $vertical-padding,
+  $horizontal-padding,
+  $border-width,
+  $border-radius,
+  $border-color,
+  $background-color,
+  $border-color-focus,
+  $background-color-focus
+) {
+  height: $height;
+  text-align: $text-align;
+  padding: $vertical-padding $horizontal-padding;
+  border: $border-width solid $border-color;
+  border-radius: $border-radius;
+  background-color: $background-color;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  &:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: $border-width solid $border-color-focus;
+    background-color: $background-color-focus;
+  }
+}
+/*
+@include input (
+$height, $text-align,
+$vertical-padding, $horizontal-padding,
+$border-width, $border-radius,
+$border-color, $background-color,
+$border-color-focus, $background-color-focus);
+@include input (34px, left, 5px, 10px, 1px, 0px, $gray, $gray-light, $gray, $gray-light);
++ Font-mix ++++++++++++++++++++++++
+@include font-mix ($color, $font-family, $font-size, $line-height, $font-weight, $text-transform );
+@include font-mix ($gray-darker, $body-font, 15px, 1, 500, none);
+@include font-mix ($gray-darker, $body-font, 15px, 1, 500, uppercase);
+*/

@@ -1,0 +1,25 @@
+/* BACKGROUND IMAGE */
+@mixin bg-image(
+  $background-repeat,
+  $background-position-horizontal,
+  $background-position-vertical,
+  $background-size
+) {
+  background-repeat: $background-repeat;
+  background-position: $background-position-horizontal
+    $background-position-vertical;
+  -webkit-background-size: $background-size;
+  -moz-background-size: $background-size;
+  -ms-background-size: $background-size;
+  -o-background-size: $background-size;
+  background-size: $background-size;
+}
+/*
+@include bg-image (
+$background-repeat,
+$background-position-horizontal, $background-position-vertical,
+$background-size);
+@include bg-image (no-repeat, center, top, auto);
+@include bg-image (no-repeat, center, center, cover);
+@include bg-image (no-repeat, center, bottom, contain);
+*/

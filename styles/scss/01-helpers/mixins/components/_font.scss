@@ -1,0 +1,27 @@
+/* FONT */
+@mixin font(
+  $color,
+  $font-family,
+  $font-size,
+  $line-height,
+  $font-weight,
+  $text-transform
+) {
+  color: $color;
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+  text-transform: $text-transform;
+}
+/*
+  @include font (
+  $color,
+  $font-family,
+  $font-size,
+  $line-height,
+  $font-weight,
+  $text-transform );
+  @include font-mix ($gray-darker, $body-font, 15px, 1, 500, none);
+  @include font-mix ($gray-darker, $body-font, 15px, 1, 500, uppercase);
+  */
