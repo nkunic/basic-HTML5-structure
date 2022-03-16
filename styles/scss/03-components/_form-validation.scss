@@ -1,6 +1,9 @@
 // Form validation
 // --------------------------------------------------
 
+@import '../01-helpers/variables.scss';
+@import '../01-helpers/mixins.scss';
+
 .has-success {
   @include form-control-validation(
     $color-success-dark,

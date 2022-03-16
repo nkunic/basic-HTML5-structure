@@ -1,32 +1,32 @@
 /* MIXINS */
 
-@import 'prefixes/appearance.scss';
-@import 'prefixes/border-radius.scss';
-@import 'prefixes/box-shadow.scss';
-@import 'prefixes/box-sizing.scss';
-@import 'prefixes/flex.scss';
-@import 'prefixes/grid.scss';
-@import 'prefixes/rotate.scss';
-@import 'prefixes/transform.scss';
-@import 'prefixes/transition.scss';
-@import 'prefixes/user-select.scss';
+@import 'mixins/prefixes/appearance.scss';
+@import 'mixins/prefixes/border-radius.scss';
+@import 'mixins/prefixes/box-shadow.scss';
+@import 'mixins/prefixes/box-sizing.scss';
+@import 'mixins/prefixes/flex.scss';
+@import 'mixins/prefixes/grid.scss';
+@import 'mixins/prefixes/rotate.scss';
+@import 'mixins/prefixes/transform.scss';
+@import 'mixins/prefixes/transition.scss';
+@import 'mixins/prefixes/user-select.scss';
 
-@import 'components/alert.scss';
-@import 'components/badge.scss';
-@import 'components/bg-image.scss';
-@import 'components/button.scss';
-@import 'components/filter-blur.scss';
-@import 'components/font.scss';
-@import 'components/font-face.scss';
-@import 'components/input.scss';
-@import 'components/placeholder.scss';
-@import 'components/select.scss';
-@import 'components/textarea.scss';
+@import 'mixins/components/alert.scss';
+@import 'mixins/components/badge.scss';
+@import 'mixins/components/bg-image.scss';
+@import 'mixins/components/button.scss';
+@import 'mixins/components/filter-blur.scss';
+@import 'mixins/components/font.scss';
+@import 'mixins/components/font-face.scss';
+@import 'mixins/components/input.scss';
+@import 'mixins/components/placeholder.scss';
+@import 'mixins/components/select.scss';
+@import 'mixins/components/textarea.scss';
 
-@import 'methods/ellipsis.scss';
-@import 'methods/flip-image.scss';
-@import 'methods/vertical-align.scss';
-@import 'methods/word-wrap.scss';
-@import 'methods/selection-color.scss';
-@import 'methods/form-control-validation.scss';
+@import 'mixins/methods/ellipsis.scss';
+@import 'mixins/methods/flip-image.scss';
+@import 'mixins/methods/vertical-align.scss';
+@import 'mixins/methods/word-wrap.scss';
+@import 'mixins/methods/selection-color.scss';
+@import 'mixins/methods/form-control-validation.scss';
 
