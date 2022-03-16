@@ -1,7 +1,5 @@
 /* MIXINS */
 
-/* @include mixin-name ();*/
-
 @import 'prefixes/appearance.scss';
 @import 'prefixes/border-radius.scss';
 @import 'prefixes/box-shadow.scss';
@@ -12,9 +10,6 @@
 @import 'prefixes/transform.scss';
 @import 'prefixes/transition.scss';
 @import 'prefixes/user-select.scss';
-@import 'prefixes/.scss';
-@import 'prefixes/.scss';
-@import 'prefixes/.scss';
 
 @import 'components/alert.scss';
 @import 'components/badge.scss';
@@ -27,10 +22,6 @@
 @import 'components/placeholder.scss';
 @import 'components/select.scss';
 @import 'components/textarea.scss';
-@import 'components/.scss';
-@import 'components/.scss';
-@import 'components/.scss';
-@import 'components/.scss';
 
 @import 'methods/ellipsis.scss';
 @import 'methods/flip-image.scss';
@@ -38,6 +29,4 @@
 @import 'methods/word-wrap.scss';
 @import 'methods/selection-color.scss';
 @import 'methods/form-control-validation.scss';
-@import 'methods/.scss';
-@import 'methods/.scss';
-@import 'methods/.scss';
+
