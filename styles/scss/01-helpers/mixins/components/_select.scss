@@ -38,6 +38,20 @@ $border-color-focus, $background-color-focus);
 @include font-mix ($gray-darker, $body-font, 15px, 1, 500, uppercase);
 */
 
+/*
+@mixin select () {
+height: 34px;
+padding: 6px 12px;   
+color: $brand-primary-color;
+font-family: $body-font;
+font-size: 13px;
+font-weight: 500;
+line-height: 1;      
+border:1px solid $brand-primary-color;
+border-radius: 0;
+}
+*/
+
 /* SELECT OPTION */
 @mixin select-option(
   $height,
@@ -77,4 +91,21 @@ $border-color-focus, $background-color-focus);
 @include font-mix ($color, $font-family, $font-size, $line-height, $font-weight, $text-transform );
 @include font-mix ($gray-darker, $body-font, 15px, 1, 500, none);
 @include font-mix ($gray-darker, $body-font, 15px, 1, 500, uppercase);
+*/
+
+/*
+@mixin select-option () {
+font-size: 11px;
+color: $brand-primary-color;
+font-family: $body-font;    
+font-size: 14px;
+line-height: 1;
+font-weight: 500;
+border-radius: 0;
+border: 1px solid $brand-primary-color;
+    &:hover {
+    background: $brand-primary-color;
+    color: $white;
+    }
+}
 */

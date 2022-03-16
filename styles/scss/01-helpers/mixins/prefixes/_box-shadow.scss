@@ -1,0 +1,68 @@
+/* BOX SHADOW */
+
+@mixin box-shadow($h-offset, $v-offset, $blur, $spread, $color, $alpha) {
+  -webkit-box-shadow: $h-offset $v-offset $blur $spread rgba($color, $alpha);
+  -moz-box-shadow: $h-offset $v-offset $blur $spread rgba($color, $alpha);
+  box-shadow: $h-offset $v-offset $blur $spread rgba($color, $alpha);
+}
+
+/*
+@include box-shadow ($h-offset, $v-offset, $blur, $spread, $color, $alpha);
+@include box-shadow (-2px, 0px, 5px, 0px, $dark-gray, 0.5);
+*/
+
+@mixin box-shadow-multiple(
+  $h-offset-one,
+  $v-offset-one,
+  $blur-one,
+  $spread-one,
+  $color-one,
+  $alpha-one,
+  $h-offset-two,
+  $v-offset-two,
+  $blur-two,
+  $spread-two,
+  $color-two,
+  $alpha-two,
+  $h-offset-three,
+  $v-offset-three,
+  $blur-three,
+  $spread-three,
+  $color-three,
+  $alpha-three
+) {
+  -webkit-box-shadow: $h-offset-one $v-offset-one $blur-one $spread-one
+      rgba($color-one, $alpha-one),
+    $h-offset-two $v-offset-two $blur-two $spread-two
+      rgba($color-two, $alpha-two),
+    $h-offset-three $v-offset-three $blur-three $spread-three
+      rgba($color-three, $alpha-three);
+  -moz-box-shadow: $h-offset-one $v-offset-one $blur-one $spread-one
+      rgba($color-one, $alpha-one),
+    $h-offset-two $v-offset-two $blur-two $spread-two
+      rgba($color-two, $alpha-two),
+    $h-offset-three $v-offset-three $blur-three $spread-three
+      rgba($color-three, $alpha-three);
+  box-shadow: $h-offset-one $v-offset-one $blur-one $spread-one
+      rgba($color-one, $alpha-one),
+    $h-offset-two $v-offset-two $blur-two $spread-two
+      rgba($color-two, $alpha-two),
+    $h-offset-three $v-offset-three $blur-three $spread-three
+      rgba($color-three, $alpha-three);
+}
+
+/*
+@include box-shadow-multiple ($h-offset-one, $v-offset-one, $blur-one, $spread-one, $color-one, $alpha-one, $h-offset-two, $v-offset-two, $blur-two, $spread-two, $color-two, $alpha-two, $h-offset-three, $v-offset-three, $blur-three, $spread-three, $color-three, $alpha-three);
+@include box-shadow-multiple (0px, 5px, 5px, -3px, $black, 0.2, 0px, 8px, 10px, 1px, $black, 0.14, 0px, 3px, 14px, 2px, $black, 0.12);
+*/
+
+@mixin box-shadow-none($value) {
+  -webkit-box-shadow: $value;
+  -moz-box-shadow: $value;
+  box-shadow: $value;
+}
+
+/*
+@include box-shadow-none ($value);
+@include box-shadow-none (none);
+*/

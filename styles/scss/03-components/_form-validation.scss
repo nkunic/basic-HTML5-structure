@@ -1,0 +1,29 @@
+// Form validation
+// --------------------------------------------------
+
+.has-success {
+  @include form-control-validation(
+    $color-success-dark,
+    $color-success-dark,
+    $color-success
+  );
+}
+.has-warning {
+  @include form-control-validation(
+    $color-warning-dark,
+    $color-warning-dark,
+    $color-warning
+  );
+}
+.has-error {
+  @include form-control-validation(
+    $color-danger-dark,
+    $color-danger-dark,
+    $color-danger
+  );
+}
+.error {
+  font-size: 12px;
+  color: $color-danger;
+  display: block;
+}

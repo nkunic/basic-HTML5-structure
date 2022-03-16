@@ -8,4 +8,18 @@
 /*
   @include transition ($object, $sec, $type);
   @include transition (all, 0.3s, linear);
-  */
+  @include transition (all, 0.2s, ease-in-out);
+  @include transition (width, 0.2s, ease-out);
+*/
+
+@mixin easing-transition() {
+  transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+}
+
+@mixin easing-transition-block() {
+  transition: none;
+  -webkit-transition: none;
+  -moz-transition: none;
+}

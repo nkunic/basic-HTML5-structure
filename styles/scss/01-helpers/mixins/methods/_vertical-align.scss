@@ -1,0 +1,12 @@
+@mixin vertical-align($position) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/*
+@include vertical-align(relative);
+@include vertical-align(absolute);
+*/

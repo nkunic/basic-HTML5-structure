@@ -1,0 +1,13 @@
+/* APPEARANCE (display an element using a platform-native styling based on the users' operating system's theme.) */
+
+@mixin appearance($value) {
+  -webkit-appearance: $value;
+  -moz-appearance: $value;
+  appearance: $value;
+}
+
+/*
+@include appearance ($value);
+@include appearance (none);
+@include appearance (window); // Select?
+*/

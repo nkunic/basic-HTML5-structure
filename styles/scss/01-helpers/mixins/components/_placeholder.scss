@@ -1,12 +1,13 @@
 /* PLACEHOLDER */
-@mixin placeholder-input(
+@mixin placeholder(
   $color,
   $font-family,
   $font-size,
   $line-height,
   $font-weight,
   $text-align,
-  $text-transform
+  $text-transform,
+  $opacity
 ) {
   ::-moz-placeholder {
     /* Firefox 19+ */
@@ -17,8 +18,10 @@
     font-weight: $font-weight;
     text-align: $text-align;
     text-transform: $text-transform;
+    opacity: $opacity;
   }
   ::-webkit-input-placeholder {
+    // Safari and Chrome
     color: $color;
     font-family: $font-family;
     font-size: $font-size;
@@ -26,6 +29,7 @@
     font-weight: $font-weight;
     text-align: $text-align;
     text-transform: $text-transform;
+    opacity: $opacity;
   }
   :-moz-placeholder {
     /* Firefox 18- */
@@ -36,8 +40,10 @@
     font-weight: $font-weight;
     text-align: $text-align;
     text-transform: $text-transform;
+    opacity: $opacity;
   }
   :-ms-input-placeholder {
+    // Internet Explorer 10+
     color: $color;
     font-family: $font-family;
     font-size: $font-size;
@@ -45,10 +51,11 @@
     font-weight: $font-weight;
     text-align: $text-align;
     text-transform: $text-transform;
+    opacity: $opacity;
   }
 }
 /*
-  @include placeholder-input (
+  @include placeholder (
   $color,
   $font-family,
   $font-size,
@@ -56,6 +63,26 @@
   $font-weight,
   $text-align,
   $text-transform);
-  @include placeholder-input ($gray-darker, $body-font, 15px, 1, 500, left, none);
-  @include placeholder-input ($gray-darker, $body-font, 15px, 1, 500, left, uppercase);
-  */
+  @include placeholder ($gray-darker, $body-font, 15px, 1, 500, left, none);
+  @include placeholder ($gray-darker, $body-font, 15px, 1, 500, left, uppercase);
+*/
+
+/*
+@mixin placeholder {
+    @include optional-at-root('::-webkit-input-placeholder') {
+        @content;
+    }
+
+    @include optional-at-root(':-moz-placeholder') {
+        @content;
+    }
+
+    @include optional-at-root('::-moz-placeholder') {
+        @content;
+    }
+
+    @include optional-at-root(':-ms-input-placeholder') {
+        @content;
+    }
+}
+*/

@@ -1,0 +1,13 @@
+/* BOX SIZING */
+
+@mixin box-sizing($value) {
+  -webkit-box-sizing: $value;
+  -moz-box-sizing: $value;
+  box-sizing: $value;
+}
+
+/*
+@include box-sizing ($value);
+@include box-sizing (border-box);
+@include box-sizing (inherit);
+*/

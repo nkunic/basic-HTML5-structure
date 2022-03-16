@@ -39,3 +39,16 @@ $border-color-focus, $background-color-focus);
 @include font-mix ($gray-darker, $body-font, 15px, 1, 500, none);
 @include font-mix ($gray-darker, $body-font, 15px, 1, 500, uppercase);
 */
+
+/*
+@mixin input () {
+color: $brand-primary-color;
+font-family: $body-font;
+font-size: 14px;
+font-weight: 500;
+line-height: 1;    
+text-align: left;   
+border:1px solid $brand-primary-color;
+border-radius: 0; 
+}
+*/

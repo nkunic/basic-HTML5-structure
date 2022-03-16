@@ -1,0 +1,14 @@
+/* SELECTION COLOR */
+
+@mixin selection-color($color) {
+  ::selection {
+    background: $color; /* WebKit/Blink Browsers */
+  }
+  ::-moz-selection {
+    background: $color; /* Gecko Browsers */
+  }
+}
+
+/*
+@include selection-color(transparent);
+*/

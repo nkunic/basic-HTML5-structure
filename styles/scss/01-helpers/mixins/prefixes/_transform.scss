@@ -1,0 +1,40 @@
+/* TRANSFORM */
+
+@mixin transformxy($valueX, $valueY) {
+  -webkit-transform: translate($valueX, $valueY);
+  -moz-transform: translate($valueX, $valueY);
+  -ms-transform: translate($valueX, $valueY);
+  -o-transform: translate($valueX, $valueY);
+  transform: translate($valueX, $valueY);
+}
+
+/*
+@include transformxy ($valueX, $valueY);
+@include transformxy (-18.85rem, 2rem);
+*/
+
+@mixin transformx($value) {
+  -webkit-transform: translateX($value);
+  -moz-transform: translateX($value);
+  -ms-transform: translateX($value);
+  -o-transform: translateX($value);
+  transform: translateX($value);
+}
+
+/*
+@include transformx ($value);
+@include transform (-18.85rem);
+*/
+
+@mixin transformy($value) {
+  -webkit-transform: translateY($value);
+  -moz-transform: translateY($value);
+  -ms-transform: translateY($value);
+  -o-transform: translateY($value);
+  transform: translateY($value);
+}
+
+/*
+@include transformy ($value);
+@include transformy (-18.85rem);
+*/

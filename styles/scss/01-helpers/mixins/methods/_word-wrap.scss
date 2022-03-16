@@ -1,0 +1,18 @@
+@mixin word-wrap($overflow-wrap, $word-wrap, $word-break, $hyphens) {
+  overflow-wrap: $overflow-wrap;
+
+  word-wrap: $word-wrap;
+
+  -ms-word-break: $word-break;
+  word-break: $word-break;
+
+  -ms-hyphens: $hyphens;
+  -moz-hyphens: $hyphens;
+  -webkit-hyphens: $hyphens;
+  hyphens: $hyphens;
+}
+
+/*
+@include word-wrap($overflow-wrap, $word-wrap, $word-break, $hyphens);
+@include word-wrap(break-word, break-word, break-word, auto);
+*/

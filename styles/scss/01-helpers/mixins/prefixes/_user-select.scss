@@ -1,0 +1,19 @@
+/* USER SELECT */
+
+@mixin user-select($value) {
+  user-select: $value; /* supported by Chrome and Opera */
+  -webkit-user-select: $value; /* Safari */
+  -khtml-user-select: $value; /* Konqueror HTML */
+  -moz-user-select: $value; /* Firefox */
+  -ms-user-select: $value; /* Internet Explorer/Edge */
+}
+
+/*
+@include user-select($value);
+@include user-select(none); user cannot select the text
+@include user-select(text); user can select the text
+@include user-select(all); user can select the text with one click
+@include user-select(auto); user-select value depend upon its parent user-select option
+@include user-select(contain); selection will be bound to particular element
+@include user-select(element); IE version of user-select contain.
+*/

@@ -1,0 +1,51 @@
+/* Btn-full */
+@include button(
+  $body-font,
+  14px,
+  1,
+  500,
+  center,
+  uppercase,
+  8px,
+  20px,
+  0px,
+  3px,
+  $white,
+  $gray,
+  transparent,
+  $white,
+  darken($gray, 10%),
+  transparent,
+  $white,
+  lighten($gray, 10%),
+  transparent,
+  $white,
+  lighten($gray, 10%),
+  transparent
+);
+
+/* Btn-outline */
+@include button(
+  $body-font,
+  14px,
+  1,
+  500,
+  center,
+  uppercase,
+  8px,
+  20px,
+  1px,
+  3px,
+  $white,
+  transparent,
+  $white,
+  $gray,
+  $white,
+  $white,
+  $white,
+  lighten($gray, 10%),
+  transparent,
+  $white,
+  lighten($gray, 10%),
+  transparent
+);
