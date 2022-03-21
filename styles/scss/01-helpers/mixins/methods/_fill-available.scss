@@ -1,0 +1,12 @@
+// =============================================================================
+// Fill available viewport height with content on handheld devices
+// =============================================================================
+@mixin fill-available() {
+  height: -moz-available;
+  height: -webkit-fill-available;
+  height: fill-available;
+}
+
+/*
+@include fill-available();
+*/

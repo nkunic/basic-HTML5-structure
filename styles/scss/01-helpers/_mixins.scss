@@ -4,6 +4,7 @@
 @import 'mixins/prefixes/border-radius.scss';
 @import 'mixins/prefixes/box-shadow.scss';
 @import 'mixins/prefixes/box-sizing.scss';
+@import 'mixins/prefixes/column-count.scss';
 @import 'mixins/prefixes/flex.scss';
 @import 'mixins/prefixes/grid.scss';
 @import 'mixins/prefixes/rotate.scss';
@@ -15,7 +16,7 @@
 @import 'mixins/components/badge.scss';
 @import 'mixins/components/bg-image.scss';
 @import 'mixins/components/button.scss';
-@import 'mixins/components/filter-blur.scss';
+@import 'mixins/components/custom-scrollbar.scss';
 @import 'mixins/components/font.scss';
 @import 'mixins/components/font-face.scss';
 @import 'mixins/components/input.scss';
@@ -24,9 +25,13 @@
 @import 'mixins/components/textarea.scss';
 
 @import 'mixins/methods/ellipsis.scss';
+@import 'mixins/methods/fill-available.scss';
 @import 'mixins/methods/flip-image.scss';
+@import 'mixins/methods/form-control-validation.scss';
+@import 'mixins/methods/image-filter.scss';
+@import 'mixins/methods/position-sticky.scss';
+@import 'mixins/methods/rem';
+@import 'mixins/methods/scroll-shadow';
+@import 'mixins/methods/selection-color.scss';
 @import 'mixins/methods/vertical-align.scss';
 @import 'mixins/methods/word-wrap.scss';
-@import 'mixins/methods/selection-color.scss';
-@import 'mixins/methods/form-control-validation.scss';
-

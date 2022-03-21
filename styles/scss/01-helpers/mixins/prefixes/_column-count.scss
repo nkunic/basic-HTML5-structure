@@ -1,0 +1,46 @@
+// =============================================================================
+// MULTI-COLUMN LAYOUT
+// =============================================================================
+@mixin column-count($value) {
+  -webkit-column-count: $value;
+  -moz-column-count: $value;
+  column-count: $value;
+}
+
+/*
+ @include column-count($value);
+ @include column-count(2);
+*/
+
+@mixin break-after($value) {
+  -webkit-column-break-after: $value;
+  -moz-column-break-after: $value;
+  break-after: $value;
+}
+
+/*
+ @include break-after($value);
+ @include break-after(column);
+*/
+
+@mixin break-inside($value) {
+  -webkit-column-break-inside: $value;
+  -moz-column-break-inside: $value;
+  break-inside: $value;
+}
+
+/*
+ @include break-inside($value);
+ @include break-inside(avoid);
+*/
+
+@mixin column-fill($value) {
+  -moz-column-fill: $value;
+  column-fill: $value;
+}
+
+/*
+ @include column-fill($value);
+ @include column-fill(balance);
+  @include column-fill(auto);
+ */

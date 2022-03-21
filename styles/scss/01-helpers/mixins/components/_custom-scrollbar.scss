@@ -1,0 +1,91 @@
+// =============================================================================
+// CUSTOM SCROLL BAR
+// =============================================================================
+
+// Webkit: Chrome, Safari and Opera
+@mixin webkit-custom-scrollbar(
+  $scrollbar-width,
+  $scrollbar-height,
+  $scrollbar-track-color,
+  $scrollbar-handle-color,
+  $scrollbar-handle-hover-color
+) {
+  /* Webkit: Scrollbar - the scrollbar */
+  ::-webkit-scrollbar {
+    width: $scrollbar-width;
+    height: $scrollbar-height;
+  }
+
+  /* Webkit: Scrollbar buttons -  the buttons on the scrollbar (arrows pointing upwards and downwards). */
+  ::-webkit-scrollbar-button {
+  }
+
+  /* Webkit: Scrollbar corner - the bottom corner of the scrollbar, where both horizontal and vertical scrollbars meet. */
+  ::-webkit-scrollbar-corner {
+  }
+
+  /* Webkit: Scrollbar track - the track (progress bar) of the scrollbar. */
+  ::-webkit-scrollbar-track {
+    background-color: $scrollbar-track-color;
+    box-shadow: inset 0 0 1px $gray;
+  }
+
+  /* Webkit: Scrollbar track - the track (progress bar) NOT covered by the handle. */
+  ::-webkit-scrollbar-track-piece {
+  }
+
+  /* Webkit: Scrollbar thumb - the draggable scrolling handle. */
+  ::-webkit-scrollbar-thumb {
+    background-color: $scrollbar-handle-color;
+  }
+
+  /* Webkit: Scrollbar handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: $scrollbar-handle-hover-color;
+  }
+
+  /*  Webkit: Scrollbar resizer - the draggable resizing handle that appears at the bottom corner of some elements. */
+  ::-webkit-resizer {
+  }
+}
+/*
+    @include webkit-custom-scrollbar($scrollbar-width, $scrollbar-height, $scrollbar-track-color, $scrollbar-handle-color, $scrollbar-handle-hover-color);
+    @include webkit-custom-scrollbar(0.1875rem, 0.1875rem, $gray-l80, $gray-l60, $blue-d20);
+ */
+
+@mixin firefox-custom-scrollbar(
+  $scrollbar-width,
+  $scrollbar-handle-color,
+  $scrollbar-track-color
+) {
+  /* Firefox - color */
+  scrollbar-color: $scrollbar-track-color $scrollbar-handle-color;
+
+  /* Firefox - size */
+  scrollbar-width: $scrollbar-width;
+}
+/*
+    @include firefox-custom-scrollbar($scrollbar-width, $scrollbar-handle-color, $scrollbar-track-color);
+    @include firefox-custom-scrollbar(thin, $gray-l60, $blue-d20);
+    @include firefox-custom-scrollbar(auto, auto);
+    @include firefox-custom-scrollbar(none, transparent, transparent);
+ */
+
+// HIDE SCROLLBARS BUT KEEP FUNCTIONALITY
+@mixin hide-scrollbar() {
+  // Webkit: Chrome, Safari and Opera
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  // IE and Edge
+  -ms-overflow-style: none;
+
+  // Firefox: dropped the support for hidden scrollbars without functionality (you could use overflow: -moz-scrollbars-none; in old versions).
+  overflow: -moz-scrollbars-none;
+  scrollbar-width: none;
+  scrollbar-color: transparent transparent;
+}
+/*
+@include hide-scrollbar();
+*/

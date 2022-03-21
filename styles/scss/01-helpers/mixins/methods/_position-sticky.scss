@@ -1,0 +1,10 @@
+/* POSITION STICKY */
+
+@mixin position-sticky() {
+  position: relative; // Fallback if browsers don't support position sticky
+  position: -webkit-sticky;
+  position: sticky;
+}
+/*
+@include position-sticky();
+*/

@@ -1,0 +1,39 @@
+// =============================================================================
+// Calculates the pixel value to rems for a given property.
+// =============================================================================
+
+@mixin rem($property, $px-values) {
+  // Convert the baseline into rems
+  $baseline-rem: ($baseline-px / 1rem);
+
+  // If only one (numeric) value, return the property/value line for it.
+  @if type-of($px-values) == 'number' {
+    #{$property}: $px_values / $baseline_rem;
+  }
+  // If more than one value, create list & perform equations on each value
+  @else {
+    // Create an empty list that we can dump values into
+    $rem-values: ();
+    @each $value in $px_values {
+      @if type-of($value) == 'number' {
+        // If the value is zero, return 0
+        @if $value == 0 {
+          $rem-values: append($rem-values, $value);
+        }
+        // If the value is not zero, convert it from px to rem
+        @else {
+          $rem-values: append($rem-values, ($value / $baseline_rem));
+        }
+      }
+      @if type-of($value) == 'string' {
+        $rem-values: append($rem-values, $value);
+      }
+    }
+    // Return the property and its list of converted values
+    #{$property}: $rem-values;
+  }
+}
+
+/*
+@include rem(padding, 80px);
+*/

@@ -243,3 +243,233 @@ $min-width
     background-color: $color;
   }
 }
+
+// =============================================================================
+// 01) BUTTON BASIC
+// =============================================================================
+
+@mixin btn() {
+  @include box-sizing(border-box);
+  @include transition(all, 0.3s, linear);
+  cursor: pointer;
+
+  .btn-label {
+  }
+
+  &:hover {
+  }
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+
+  &[disabled],
+  &.disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+}
+
+/*
+@include btn ();
+*/
+
+// =============================================================================
+// 02) BUTTON SIZE
+// =============================================================================
+
+@mixin btn-size(
+  $vertical-padding,
+  $horizontal-padding,
+  $height,
+  $min-width,
+  $width
+) {
+  padding: $vertical-padding $horizontal-padding;
+  height: $height;
+  min-width: $min-width;
+  width: $width;
+}
+
+/*
+
+@include btn-size (
+    $vertical-padding, $horizontal-padding,
+    $height, $min-width, $width);
+
+*/
+
+// =============================================================================
+// 03) BUTTON STYLE
+// =============================================================================
+
+@mixin btn-style(
+  $border-width,
+  $border-style,
+  $border-radius,
+  $alignment,
+  $border-color,
+  $border-color-hover,
+  $border-color-focus,
+  $border-color-active,
+  $background-color,
+  $background-color-hover,
+  $background-color-focus,
+  $background-color-active
+) {
+  @include display-flex();
+  @include flex-direction(row);
+  @include align-items(center);
+  @include justify-content($alignment);
+  border-width: $border-width;
+  border-style: $border-style;
+  @include border-radius($border-radius);
+  border-color: $border-color;
+  background-color: $background-color;
+
+  &:hover {
+    border-color: $border-color-hover;
+    background-color: $background-color-hover;
+  }
+  &:focus {
+    border-color: $border-color-focus;
+    background-color: $background-color-focus;
+  }
+  &:active {
+    border-color: $border-color-active;
+    background-color: $background-color-active;
+  }
+}
+
+/*
+
+@include btn-style(
+    $border-width, $border-style, $border-radius, $alignment,
+    $border-color, $border-color-hover, $border-color-focus, $border-color-active,
+    $background-color, $background-color-hover, $background-color-focus, $background-color-active ) {
+);
+
+*/
+
+// =============================================================================
+// 04) BUTTON ICON
+// =============================================================================
+
+@mixin btn-icon(
+  $icon-height,
+  $icon-width,
+  $icon-font-size,
+  $icon-line-height,
+  $icon-color,
+  $icon-color-hover,
+  $icon-color-focus,
+  $icon-color-active
+) {
+  i {
+    height: $icon-height;
+    width: $icon-width;
+    font-size: $icon-font-size;
+    line-height: $icon-line-height;
+    color: $icon-color;
+    @include transition(all, 0.3s, linear);
+  }
+
+  &:hover {
+    i {
+      color: $icon-color-hover;
+    }
+  }
+
+  &:focus {
+    i {
+      color: $icon-color-focus;
+    }
+  }
+
+  &:active {
+    i {
+      color: $icon-color-active;
+    }
+  }
+}
+
+/*
+@include btn-icon (
+    $icon-width, $icon-height,
+    $icon-font-size, $icon-line-height,
+    $icon-color, $icon-color-hover, $icon-color-focus, $icon-color-active);
+
+ */
+
+// =============================================================================
+// 05) BUTTON LABEL
+// =============================================================================
+
+@mixin btn-label(
+  $font-family,
+  $font-size,
+  $line-height,
+  $font-weight,
+  $text-transform,
+  $color,
+  $color-hover,
+  $color-focus,
+  $color-active
+) {
+  .btn-label {
+    font-family: $font-family;
+    font-size: $font-size;
+    line-height: $line-height;
+    font-weight: $font-weight;
+    text-transform: $text-transform;
+    color: $color;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+  }
+
+  &:hover {
+    .btn-label {
+      color: $color-hover;
+    }
+  }
+  &:focus {
+    .btn-label {
+      color: $color-focus;
+    }
+  }
+  &:active {
+    .btn-label {
+      color: $color-active;
+    }
+  }
+}
+
+/*
+
+@include btn-label (
+    $font-family, $font-size, $line-height, $font-weight, $text-transform,
+    $color, $color-hover, $color-focus, $color-active);
+
+ */
+
+// =============================================================================
+// 06) ICON + LABEL MARGIN
+// =============================================================================
+
+@mixin btn-icon-label-margin-left($margin-left) {
+  span {
+    margin-left: $margin-left;
+  }
+}
+
+/*
+    @include btn-icon-label-margin-left($margin-left);
+
+    @include btn-icon-label-margin-left(0);
+    @include breakpoint(medium) {
+        @include btn-icon-label-margin-left(0.625rem);
+    }
+
+*/

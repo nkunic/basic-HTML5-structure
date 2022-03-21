@@ -1,0 +1,47 @@
+// =============================================================================
+// SCROLL SHADOWS
+// =============================================================================
+
+@mixin scroll-shadow--vertical() {
+  background: linear-gradient(white 30%, rgba(255, 255, 255, 0)),
+    linear-gradient(rgba(255, 255, 255, 0), white 70%) 0 100%,
+    radial-gradient(
+      farthest-side at 50% 0,
+      rgba(91, 91, 91, 0.2),
+      rgba(0, 0, 0, 0)
+    ),
+    radial-gradient(
+        farthest-side at 50% 100%,
+        rgba(91, 91, 91, 0.2),
+        rgba(0, 0, 0, 0)
+      )
+      0 100%;
+  background-repeat: no-repeat;
+  background-attachment: local, local, scroll, scroll;
+  background-size: 100% 2.5rem, 100% 2.5rem, 100% 1.25rem, 100% 1.25rem;
+}
+
+@mixin scroll-shadow--horizontal() {
+  background: linear-gradient(90deg, white 0%, rgba(255, 255, 255, 0)),
+    linear-gradient(-90deg, white 0%, rgba(255, 255, 255, 0)) 100% 0,
+    radial-gradient(
+      farthest-side at 0% 50%,
+      rgba(91, 91, 91, 0.5),
+      rgba(91, 91, 91, 0)
+    ),
+    radial-gradient(
+        farthest-side at 100% 50%,
+        rgba(91, 91, 91, 0.5),
+        rgba(91, 91, 91, 0)
+      )
+      100% 0%;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-attachment: local, local, scroll, scroll;
+  background-size: 2.75rem 100%, 2.85rem 100%, 0.625rem 100%, 0.625rem 100%;
+}
+
+/*
+@include scroll-shadow--vertical();
+@include scroll-shadow--horizontal();
+*/
